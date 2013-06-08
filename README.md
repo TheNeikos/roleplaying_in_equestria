@@ -1,2 +1,4 @@
-roleplaying_in_equestria
+Roleplaying in Equestria
 ========================
+
+The source code for roleplayinginequestria.com
