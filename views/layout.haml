@@ -3,8 +3,30 @@
   %link{rel:"stylesheet", href:"//yui.yahooapis.com/pure/0.1.0/pure-min.css"}
   %link{rel:"stylesheet", href:"/styles.css"}
   %link{rel:"stylesheet", href:"//fonts.googleapis.com/css?family=Oswald|Open+Sans:300"}
+  %link{rel:"shortcut icon", href:"/favicon.png"}
   %script{src:"//ajax.googleapis.com/ajax/libs/jquery/2.0.2/jquery.min.js"}
   %script{src:"/script.js"}
   %title Roleplaying in Equestria
 %body
-  !=yield
+  .pure-g-r.content
+    .pure-u#nav.pure-menu.pure-menu-open
+      %a.pure-menu-heading{href:"/"} RP In Equestria
+      %ul
+        %li
+          %a{href:"/"} Home
+        %li
+          %a{href:"/"} Roleplay Websites
+        %li.seperator
+        %li
+          %a{href:"/advantages"} Advantages
+        %li
+          %a{href:"/advantages"} Skills
+        %li
+          %a{href:"/advantages"} Spells
+        %li
+          %a{href:"/advantages"} Quests
+        %li
+          %a{href:"/advantages"} Campaigns
+        %li.seperator
+    #content
+      !=yield
