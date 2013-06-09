@@ -9,6 +9,8 @@
   %title Roleplaying in Equestria
 %body
   .pure-g-r.content
+    #content
+      !=yield
     .pure-u#nav.pure-menu.pure-menu-open
       %a.pure-menu-heading{href:"/"} RP In Equestria
       %ul
@@ -28,5 +30,3 @@
         %li
           %a{href:"/advantages"} Campaigns
         %li.seperator
-    #content
-      !=yield
