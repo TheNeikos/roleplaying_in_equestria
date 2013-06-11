@@ -1,10 +1,11 @@
 require 'sinatra/base'
 require 'sinatra/reloader'
+require 'sinatra/content_for'
 require 'haml'
 
 
 class EquestrianRP < Sinatra::Base
-
+  helpers Sinatra::ContentFor
   configure :development do
     register Sinatra::Reloader
   end
@@ -32,11 +33,33 @@ class EquestrianRP < Sinatra::Base
 
   end
 
+  def self.simple_path( name )
+
+    get "/" + name.to_s do
+
+      haml name.to_sym
+
+    end
+
+  end
+
   get '/' do
 
     haml :index
 
   end
+
+  simple_path :about
+
+  simple_path :websites 
+
+  simple_path :guides
+
+  simple_path :getting_started
+
+  simple_path :being_player
+
+  simple_path :being_gamemaster
 
   get '/styles.css' do
     scss :styles

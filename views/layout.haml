@@ -1,32 +1,78 @@
 !!!5
 %head
+  %title 
+    !=yield_content :title
+    Roleplaying in Equestria
+  !=yield_content :meta_tags
+
+  %meta{name:"description", content: "Learn how to Roleplay in an Equestrian themed environment."}
   %link{rel:"stylesheet", href:"//yui.yahooapis.com/pure/0.1.0/pure-min.css"}
   %link{rel:"stylesheet", href:"/styles.css"}
   %link{rel:"stylesheet", href:"//fonts.googleapis.com/css?family=Oswald|Open+Sans:300"}
   %link{rel:"shortcut icon", href:"/favicon.png"}
   %script{src:"//ajax.googleapis.com/ajax/libs/jquery/2.0.2/jquery.min.js"}
   %script{src:"/script.js"}
-  %title Roleplaying in Equestria
+  
 %body
+  %noscript
+    .pure-u-1.red.centered
+      You are currently browsing with Javascript disabled, please enable javascript to get the full experience of this website.
   .pure-g-r.content
     #content
       !=yield
+      #legal.pure-u-1.centered
+        MLP:FiM is &copy; to Hasbro 
+        &nbsp;|&nbsp; 
+        Website is &copy; to Marcel Muller
+        &nbsp;|&nbsp; 
+        This website is built using 
+        %a.quiet{href:"http://purecss.io/", rel:"nofollow"} PureCSS
+        and
+        %a.quiet{href:"http://www.sinatrarb.com/", rel:"nofollow"} Sinatra
     .pure-u#nav.pure-menu.pure-menu-open
       %a.pure-menu-heading{href:"/"} RP In Equestria
       %ul
         %li
           %a{href:"/"} Home
         %li
-          %a{href:"/"} Roleplay Websites
+          %a{href:"/websites"} Roleplay Websites
+
         %li.seperator
+
+        %li
+          %a{href:"/getting_started"} Getting Started
+        %li
+          %a{href:"/being_player"} Being a Player
+        %li
+          %a{href:"/being_gamemaster"} Being a GM
+        %li
+          %a{href:"/guides"} All Guides
+
+        %li.seperator
+
         %li
           %a{href:"/advantages"} Advantages
         %li
-          %a{href:"/advantages"} Skills
+          %a{href:"/skills"} Skills
         %li
-          %a{href:"/advantages"} Spells
+          %a{href:"/spells"} Spells
         %li
-          %a{href:"/advantages"} Quests
+          %a{href:"/quests"} Quests
         %li
-          %a{href:"/advantages"} Campaigns
+          %a{href:"/characters"} Characters
+        %li
+          %a{href:"/campaigns"} Campaigns
+
         %li.seperator
+
+        %li
+          %a{href:"/about"} About
+  #error-modal.hidden.modal
+    .inner
+      %header
+        An error has occured
+        %a.unstyled.pull-right.close.white{href:"#"} &times;
+      .content.red
+        Please try refreshing at a later time or contact us
+      .actions.clearfix
+        %a.pure-button.pure-button-close.pure-button-small.pull-right.close{href:"#"} Close

@@ -24,14 +24,77 @@ h1,h2,h3,h4,h5,h6 {
   left: $nav_width;
   bottom: 0;
   z-index: 1000;
-  background: #191818;
+  background: #22192D; //#191818;
   overflow-y: auto;
+  border:none;
 
 }
 
 #content {
 
   width: 100%;
+
+}
+
+#legal {
+
+  margin-top: 50px;
+  font-size: 75%;
+  color: #AAA;
+  margin-bottom: 20px;
+}
+
+.modal {
+
+  position: fixed;
+  top: 0px;
+  left: 0px;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0,0,0,0.3);
+
+
+  .inner {
+    position: fixed;
+    top: 150px;
+    left: 25%;
+    width: 50%;
+    background-color: rgba(20,20,20,0.9);
+    border-radius: 5px;
+
+    header {
+
+      padding: 10px;
+      padding-right: 15px;
+      margin-bottom: 5px;
+      color: white;
+      border-bottom: 1px dashed #999;
+
+    }
+
+    .content {
+
+      padding: 15px;
+
+    }
+
+    .actions {
+
+      border-top: 1px dashed #555;
+
+      padding: {
+
+        left: 15px;
+        right: 15px;
+        bottom: 15px;
+        top: 15px;
+
+      }
+
+    }
+
+  }
+
 
 }
 
@@ -192,6 +255,13 @@ h3 {
 
 }
 
+.white {
+
+  color: snow;
+  text-shadow: 0px 0px 2px transparentize(#DDD, 0.8);
+
+}
+
 ul.styled, ol.styled {
 
   li {
@@ -201,4 +271,103 @@ ul.styled, ol.styled {
 
   }
 
+}
+
+a.unstyled {
+
+  text-decoration: none;
+
+}
+
+.quiet {
+
+  color: #AAA;
+
+  a {
+
+    color: inherit;
+
+    &:hover {
+
+      color: blue;
+
+    }
+
+  }
+
+}
+
+.hidden {
+
+  display: none;
+
+}
+
+.pure-button-close {
+
+  background-color: #A9D05C;
+
+}
+
+.pure-button-small {
+
+  font-size: 75%;
+
+}
+
+.pull-right {
+
+  float: right;
+
+}
+
+.clearfix:after {
+     visibility: hidden;
+     display: block;
+     font-size: 0;
+     content: " ";
+     clear: both;
+     height: 0;
+     }
+.clearfix { display: inline-block; }
+/* start commented backslash hack \*/
+* html .clearfix { height: 1%; }
+.clearfix { display: block; }
+/* close commented backslash hack */
+
+hr {
+
+  border-style: dashed;
+  border-color: #AAA;
+
+  &.white{ 
+
+    color: #DDD;
+
+  }
+
+  &.small {
+
+    width: 50%;
+    border: 0px;
+    border-top: 1px;
+    border-style: solid;
+    border-color: #DDD;
+
+  }
+
+}
+
+blockquote {
+
+  border-left: 5px solid #ddd;
+  padding: 5px;
+  padding-left: 10px;
+
+}
+
+p {
+
+  line-height: 161.8%;
+  
 }
