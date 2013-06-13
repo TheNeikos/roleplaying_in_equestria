@@ -5,14 +5,14 @@
     Roleplaying in Equestria
   !=yield_content :meta_tags
 
-  %meta{name:"description", content: "Learn how to Roleplay in an Equestrian themed environment."}
-  %link{rel:"stylesheet", href:"//yui.yahooapis.com/pure/0.1.0/pure-min.css"}
+  %meta{name:"description", content: "#{yield_content(:description)}" }
+  %link{rel:"stylesheet", href:"/purecss.css"}
   %link{rel:"stylesheet", href:"/styles.css"}
   %link{rel:"stylesheet", href:"//fonts.googleapis.com/css?family=Oswald|Open+Sans:300"}
   %link{rel:"shortcut icon", href:"/favicon.png"}
   %script{src:"//ajax.googleapis.com/ajax/libs/jquery/2.0.2/jquery.min.js"}
   %script{src:"/script.js"}
-  
+
 %body
   %noscript
     .pure-u-1.red.centered
@@ -51,9 +51,7 @@
         %li.seperator
 
         %li
-          %a{href:"/advantages"} Advantages
-        %li
-          %a{href:"/skills"} Skills
+          %a{href:"/advantages"} Advantages/Skills
         %li
           %a{href:"/spells"} Spells
         %li
@@ -73,6 +71,6 @@
         An error has occured
         %a.unstyled.pull-right.close.white{href:"#"} &times;
       .content.red
-        Please try refreshing at a later time or contact us
+        The Page you are trying to access is still under construction, please check back again later.
       .actions.clearfix
-        %a.pure-button.pure-button-close.pure-button-small.pull-right.close{href:"#"} Close
+        %a.pure-button.pure-button-green.pure-button-small.pull-right.close{href:"#"} Close

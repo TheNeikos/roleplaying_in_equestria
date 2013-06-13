@@ -61,6 +61,8 @@ class EquestrianRP < Sinatra::Base
 
   simple_path :being_gamemaster
 
+  simple_path :advantages
+
   get '/styles.css' do
     scss :styles
   end
