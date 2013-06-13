@@ -37,8 +37,10 @@ $(function(){
   $("body").on("click", "a", function(e){
 
     var elem = this;
-
-    if( (elem.host != "lvh.me") ^ (elem.host != "roleplayinginequestria.com") && elem.pathname[0] != "#" ){ return; }
+    console.log(elem.pathname[0])
+    if( elem.pathname[0] == "#" ){ return; }
+    
+    if( elem.host != window.location.hostname ){return;}
     $("#error-modal").hide()
     e.preventDefault()
     // Now let's do magic and replace the #content!
