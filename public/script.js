@@ -38,7 +38,7 @@ $(function(){
 
     var elem = this;
 
-    if( elem.host != "lvh.me" && elem.host != "roleplayinginequestria.me" && elem.pathname[0] != "#" ){ return; }
+    if( elem.host != "lvh.me" && elem.host != "roleplayinginequestria.com" && elem.pathname[0] != "#" ){ return; }
     $("#error-modal").hide()
     e.preventDefault()
     // Now let's do magic and replace the #content!
