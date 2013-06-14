@@ -217,7 +217,7 @@ h1,h2,h3,h4,h5,h6 {
 h3 {
 
   font-weight: 200;
-  font-size: 150%;
+  font-size: 125%;
 
 }
 
@@ -399,6 +399,8 @@ blockquote {
 p {
 
   line-height: 161.8%;
+  text-align: justify; 
+  text-justify: newspaper
 
 }
 
