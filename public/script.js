@@ -23,7 +23,13 @@ $(function(){
       if(!force){
         history.pushState({loadable: true},null,path)
       }
-      ga('send', 'pageview');
+      // http://www.pansapien.com/ember/2013/01/using-google-analytics-with-ember-js/ Thanks!
+      page = window.location.hash.length > 0 ?
+             window.location.hash.substring(1) :
+             window.location.pathname;
+
+      // You need your Google Analytics code already loaded for _ga to be initialized
+      ga('send', 'pageview' ,page);
       pathChanged()
       
     }).error(function(){
@@ -37,7 +43,6 @@ $(function(){
   $("body").on("click", "a", function(e){
 
     var elem = this;
-    console.log(elem.pathname[0])
     if( elem.pathname[0] == "#" ){ return; }
     
     if( elem.host != window.location.hostname ){return;}
